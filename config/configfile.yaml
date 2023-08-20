@@ -1,0 +1,41 @@
+conda_environment: "workflow/envs/nextstrain.yaml"
+
+genesforglycosylation: ["G", "F"]
+
+buildstorun: ["genome"]
+
+exclude: "config/dropped_strains.txt"
+
+description: "config/description.md"
+
+strain_id_field: "accession"
+display_strain_field: "strain_original"
+
+subtypes: ['a']
+
+filter:
+  group_by: "year country"
+  min_coverage:
+    genome: 0.8
+    G: 0.6
+    F: 0.3
+
+  subsample_max_sequences:
+    genome: 2000
+    G: 3000
+    F: 3000
+
+files:
+  color_schemes: "config/colors.tsv"
+  auspice_config: "config/auspice_config.json"
+
+refine:
+  coalescent: "opt"
+  date_inference: "marginal"
+  clock_filter_iqd: 4
+
+ancestral:
+  inference: "joint"
+
+traits:
+  columns: "country"
