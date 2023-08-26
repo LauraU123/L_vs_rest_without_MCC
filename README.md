@@ -12,11 +12,9 @@ whether recombination occurs.
 
 ## Workflow 
 
-is workflow uses a similar principle to the main nextstrain/rsv workflow, 
+This workflow uses a similar principle to the main nextstrain/rsv workflow, 
 but does not include clades or glycosylation, and splits the sequence alignment into two,
 constructing two separate analyses based on the same sequences. 
-
-It includes a step to find MCCs (Maximally Compatible Clades) using the [TreeKnit Julia](https://github.com/PierreBarrat/TreeKnit.jl) package.
 
 
 * Input: RSV reference files, metadata and sequences
